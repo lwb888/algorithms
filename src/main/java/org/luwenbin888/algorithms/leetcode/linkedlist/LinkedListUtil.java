@@ -7,6 +7,8 @@ public class LinkedListUtil {
             System.out.print(p.val + "-->");
             p = p.next;
         }
+
+        System.out.println();
     }
 
     public static ListNode construct(int[] data) {
