@@ -60,6 +60,13 @@ public class TreeUtils {
         System.out.print(root.val + " ");
     }
 
+    public static TreeNode search(TreeNode root, int val) {
+        if (root == null) return null;
+        if (root.val == val) return root;
+        if (root.val > val) return search(root.left, val);
+        else return search(root.right, val);
+    }
+
     public static void main(String[] args) {
         Integer[] arr = {5,4,8, 11, null, 13, 4, 7, 2, null, null, null, 1};
         TreeNode root = TreeUtils.constructTree(arr);
